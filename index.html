@@ -1,149 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LawAccess247 - 100% Success Guarantee | 24/7 Lawyer Support</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LawAccess247 | Professional Legal Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#111827;
+}
+
+/* TOP BAR */
+
+.top-bar{
+    width:100%;
+    background:#0f172a;
+    color:white;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+.top-bar i{
+    color:#fbbf24;
+    margin-right:8px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 20px rgba(0,0,0,0.08);
+}
+
+.nav-container{
+    width:85%;
+    margin:auto;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.logo span{
+    color:#d97706;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#111827;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#d97706;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(15,23,42,.82),rgba(15,23,42,.82)),
+    url('https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    width:85%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.1;
+    color:white;
+    margin-bottom:25px;
+}
+
+.hero-text span{
+    color:#fbbf24;
+}
+
+.hero-text p{
+    color:#e5e7eb;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#f59e0b;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#d97706;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:#111827;
+}
+
+/* HERO CARD */
+
+.hero-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+.hero-card h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.hero-card input,
+.hero-card textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+}
+
+.hero-card button{
+    width:100%;
+    padding:16px;
+    background:#f59e0b;
+    border:none;
+    color:white;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-card button:hover{
+    background:#d97706;
+}
+
+/* STATS */
+
+.stats{
+    width:85%;
+    margin:auto;
+    margin-top:-60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stat-box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.stat-box i{
+    font-size:40px;
+    color:#f59e0b;
+    margin-bottom:15px;
+}
+
+.stat-box h2{
+    font-size:40px;
+}
+
+.stat-box p{
+    color:#6b7280;
+}
+
+/* SERVICES */
+
+.services{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#6b7280;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card i{
+    width:70px;
+    height:70px;
+    background:#fef3c7;
+    color:#d97706;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.service-card p{
+    color:#6b7280;
+    line-height:1.8;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+    background:#111827;
+    padding:110px 8%;
+    color:white;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#1f2937;
+    padding:35px;
+    border-radius:20px;
+}
+
+.stars{
+    color:#fbbf24;
+    margin-bottom:15px;
+}
+
+.testimonial-card p{
+    line-height:1.8;
+    color:#d1d5db;
+    margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:110px 8%;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info{
+    background:#0f172a;
+    color:white;
+    padding:45px;
+    border-radius:20px;
+}
+
+.contact-info h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.contact-item i{
+    color:#fbbf24;
+    font-size:22px;
+}
+
+.contact-form{
+    background:white;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+}
+
+.contact-form button{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:16px 30px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.hero-container{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:40px;
+}
+
+.section-title h2{
+    font-size:35px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-    <!-- Fixed 24/7 Contact Bar -->
-    <div class="contact-bar">
-        <div class="contact-item"><i class="fas fa-phone"></i> CALL 24/7: <strong>+1-800-LAW-WIN</strong></div>
-        <div class="contact-item"><i class="fas fa-comments"></i> <strong>LIVE CHAT NOW</strong></div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-gavel"></i> LawAccess247
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cases">All Cases</a></li>
-                <li><a href="#laws">All Laws</a></li>
-                <li><a href="#success">100% Success</a></li>
-                <li><a href="#contact">24/7 Contact</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
+<!-- TOP BAR -->
 
-    <!-- Hero Section - Success Guarantee -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1><span class="highlight">100% SUCCESS GUARANTEE</span></h1>
-            <h2>Win Your Case or It's FREE</h2>
-            <p>24/7 Lawyer Access • All Cases Covered • Proven Results</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">GET FREE CONSULTATION <i class="fas fa-phone"></i></a>
-                <a href="#cases" class="btn-secondary">View All Cases</a>
-            </div>
-        </div>
-        <div class="hero-stats">
-            <div class="stat"><strong>10,000+</strong> Cases Won</div>
-            <div class="stat"><strong>100%</strong> Success Rate</div>
-            <div class="stat"><strong>24/7</strong> Available</div>
-        </div>
-    </section>
+<div class="top-bar">
+    <div><i class="fas fa-phone"></i> 24/7 Legal Support</div>
+    <div><i class="fas fa-envelope"></i> support@lawaccess247.com</div>
+</div>
 
-    <!-- All Cases Database -->
-    <section id="cases" class="cases-section">
-        <div class="container">
-            <h2>All Cases - Search & Filter</h2>
-            <div class="search-filter">
-                <input type="text" id="caseSearch" placeholder="Search cases by name, type, year...">
-                <select id="caseFilter">
-                    <option>All Categories</option>
-                    <option>Criminal</option>
-                    <option>Civil</option>
-                    <option>Family</option>
-                    <option>Business</option>
-                </select>
-            </div>
-            <div id="casesGrid" class="cases-grid"></div>
-        </div>
-    </section>
+<!-- NAVBAR -->
 
-    <!-- All Laws Database -->
-    <section id="laws" class="laws-section">
-        <div class="container">
-            <h2>Complete Law Database</h2>
-            <div class="search-box">
-                <input type="text" id="lawSearch" placeholder="Search any law/statute...">
-                <button onclick="searchLaws()"><i class="fas fa-search"></i></button>
-            </div>
-            <div id="lawResults"></div>
-        </div>
-    </section>
+<nav class="navbar">
 
-    <!-- 100% Success Stories -->
-    <section id="success" class="success-section">
-        <div class="container">
-            <h2>Our 100% Success Stories</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <p>"Won my criminal case in 30 days! 100% recommended."</p>
-                    <h4>John D. - Criminal Defense</h4>
-                </div>
-                <!-- More testimonials -->
-            </div>
-        </div>
-    </section>
+<div class="nav-container">
 
-    <!-- 24/7 Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Us 24/7 - We Answer Immediately</h2>
-            <div class="contact-grid">
-                <div class="contact-card phone">
-                    <i class="fas fa-phone-volume"></i>
-                    <h3>Call Anytime</h3>
-                    <p><strong>+1-800-LAW-WIN</strong><br>24/7 Live Lawyers</p>
-                </div>
-                <div class="contact-card chat">
-                    <i class="fas fa-comments"></i>
-                    <h3>Live Chat</h3>
-                    <p>Ask anything instantly<br>Lawyers online 24/7</p>
-                </div>
-                <div class="contact-card form">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Free Consultation</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name">
-                        <input type="tel" placeholder="Phone">
-                        <textarea placeholder="Your Case..."></textarea>
-                        <button type="submit">SEND NOW</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="logo">
+<i class="fas fa-scale-balanced"></i>
+Law<span>Access247</span>
+</div>
 
-    <!-- Fixed 24/7 Chat Widget -->
-    <div id="chatWidget" class="chat-widget">
-        <button id="chatToggle" class="chat-btn">
-            <i class="fas fa-comments"></i> CHAT 24/7
-        </button>
-        <div id="chatWindow" class="chat-window">
-            <div class="chat-header">
-                <span>🔥 Live Lawyer 24/7</span>
-                <button id="chatClose">×</button>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="message ai">Hello! I'm online 24/7. What's your legal question?</div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Type your question...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </div>
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Cases</a></li>
+<li><a href="#">Lawyers</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 
-    <script src="script.js"></script>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-text">
+
+<h1>
+Professional <span>Legal Services</span><br>
+For Every Case
+</h1>
+
+<p>
+Experienced lawyers helping individuals and businesses with trusted legal advice, court representation, and complete legal support.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn btn-primary">Free Consultation</a>
+<a href="#" class="btn btn-secondary">Explore Services</a>
+</div>
+
+</div>
+
+<!-- FORM -->
+
+<div class="hero-card">
+
+<h3>Quick Legal Help</h3>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="5" placeholder="Describe Your Legal Issue"></textarea>
+
+<button type="submit">
+Request Consultation
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-box">
+<i class="fas fa-gavel"></i>
+<h2>12K+</h2>
+<p>Cases Solved</p>
+</div>
+
+<div class="stat-box">
+<i class="fas fa-user-tie"></i>
+<h2>250+</h2>
+<p>Expert Lawyers</p>
+</div>
+
+<div class="stat-box">
+<i class="fas fa-award"></i>
+<h2>98%</h2>
+<p>Client Satisfaction</p>
+</div>
+
+<div class="stat-box">
+<i class="fas fa-clock"></i>
+<h2>24/7</h2>
+<p>Support Available</p>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="section-title">
+<h2>Our Legal Services</h2>
+<p>Complete legal solutions for individuals and businesses</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+<i class="fas fa-scale-balanced"></i>
+<h3>Criminal Law</h3>
+<p>
+Professional defense lawyers handling criminal cases with strategic legal representation and guidance.
+</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-building"></i>
+<h3>Business Law</h3>
+<p>
+Legal services for startups, companies, contracts, taxation, and corporate compliance matters.
+</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-people-roof"></i>
+<h3>Family Law</h3>
+<p>
+Support for divorce, child custody, marriage disputes, and family legal counseling.
+</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-file-contract"></i>
+<h3>Civil Cases</h3>
+<p>
+Experienced legal support for property disputes, agreements, compensation, and civil litigation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<div class="section-title">
+<h2 style="color:white;">Client Testimonials</h2>
+<p style="color:#9ca3af;">
+What our clients say about our legal services
+</p>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+"The lawyers were professional and supportive throughout my case. Excellent legal guidance and communication."
+</p>
+
+<h4>Rahul Sharma</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+"Very experienced team. They helped me resolve my business dispute smoothly and professionally."
+</p>
+
+<h4>Priya Mehta</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<p>
+"Quick response, honest advice, and great support during my legal issue. Highly recommended."
+</p>
+
+<h4>Amit Verma</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h2>Need Legal Assistance?</h2>
+
+<p>
+Our legal experts are ready to help you with professional advice and complete legal support anytime.
+</p>
+
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<span>+91 98765 43210</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<span>support@lawaccess247.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-location-dot"></i>
+<span>Kolkata, India</span>
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<h2 style="margin-bottom:20px;">Send Message</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Subject">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button type="submit">
+Submit Now
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 LawAccess247. All Rights Reserved.
+</p>
+
+</footer>
+
 </body>
 </html>
