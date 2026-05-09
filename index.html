@@ -1,2 +1,149 @@
-<button onclick="alert('Hello Bhai 😎')">Click Me</button>
-<img src="https://kids.nationalgeographic.com/animals/mammals/facts/lion"my image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawAccess247 - 100% Success Guarantee | 24/7 Lawyer Support</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed 24/7 Contact Bar -->
+    <div class="contact-bar">
+        <div class="contact-item"><i class="fas fa-phone"></i> CALL 24/7: <strong>+1-800-LAW-WIN</strong></div>
+        <div class="contact-item"><i class="fas fa-comments"></i> <strong>LIVE CHAT NOW</strong></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-gavel"></i> LawAccess247
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cases">All Cases</a></li>
+                <li><a href="#laws">All Laws</a></li>
+                <li><a href="#success">100% Success</a></li>
+                <li><a href="#contact">24/7 Contact</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Success Guarantee -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">100% SUCCESS GUARANTEE</span></h1>
+            <h2>Win Your Case or It's FREE</h2>
+            <p>24/7 Lawyer Access • All Cases Covered • Proven Results</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn-primary">GET FREE CONSULTATION <i class="fas fa-phone"></i></a>
+                <a href="#cases" class="btn-secondary">View All Cases</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><strong>10,000+</strong> Cases Won</div>
+            <div class="stat"><strong>100%</strong> Success Rate</div>
+            <div class="stat"><strong>24/7</strong> Available</div>
+        </div>
+    </section>
+
+    <!-- All Cases Database -->
+    <section id="cases" class="cases-section">
+        <div class="container">
+            <h2>All Cases - Search & Filter</h2>
+            <div class="search-filter">
+                <input type="text" id="caseSearch" placeholder="Search cases by name, type, year...">
+                <select id="caseFilter">
+                    <option>All Categories</option>
+                    <option>Criminal</option>
+                    <option>Civil</option>
+                    <option>Family</option>
+                    <option>Business</option>
+                </select>
+            </div>
+            <div id="casesGrid" class="cases-grid"></div>
+        </div>
+    </section>
+
+    <!-- All Laws Database -->
+    <section id="laws" class="laws-section">
+        <div class="container">
+            <h2>Complete Law Database</h2>
+            <div class="search-box">
+                <input type="text" id="lawSearch" placeholder="Search any law/statute...">
+                <button onclick="searchLaws()"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="lawResults"></div>
+        </div>
+    </section>
+
+    <!-- 100% Success Stories -->
+    <section id="success" class="success-section">
+        <div class="container">
+            <h2>Our 100% Success Stories</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"Won my criminal case in 30 days! 100% recommended."</p>
+                    <h4>John D. - Criminal Defense</h4>
+                </div>
+                <!-- More testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 24/7 Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us 24/7 - We Answer Immediately</h2>
+            <div class="contact-grid">
+                <div class="contact-card phone">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Call Anytime</h3>
+                    <p><strong>+1-800-LAW-WIN</strong><br>24/7 Live Lawyers</p>
+                </div>
+                <div class="contact-card chat">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>Ask anything instantly<br>Lawyers online 24/7</p>
+                </div>
+                <div class="contact-card form">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Free Consultation</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="tel" placeholder="Phone">
+                        <textarea placeholder="Your Case..."></textarea>
+                        <button type="submit">SEND NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed 24/7 Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <button id="chatToggle" class="chat-btn">
+            <i class="fas fa-comments"></i> CHAT 24/7
+        </button>
+        <div id="chatWindow" class="chat-window">
+            <div class="chat-header">
+                <span>🔥 Live Lawyer 24/7</span>
+                <button id="chatClose">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">Hello! I'm online 24/7. What's your legal question?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your question...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
