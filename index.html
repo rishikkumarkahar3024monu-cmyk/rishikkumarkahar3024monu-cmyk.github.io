@@ -340,11 +340,14 @@ body{
 }
 
 .contact-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
+.contact-info{
+    width:700px;
+}
 .contact-info{
     background:#0f172a;
     color:white;
@@ -425,10 +428,8 @@ footer{
 }
 
 .contact-container{
-    display:flex;
-    justify-content:center;
+    grid-template-columns:1fr;
 }
-
 .hero-text h1{
     font-size:50px;
 }
