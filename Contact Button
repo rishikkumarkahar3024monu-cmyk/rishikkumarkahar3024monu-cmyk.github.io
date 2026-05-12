@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AS Legal Solutions</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* HEADER */
+.header{
+    width:100%;
+    background:linear-gradient(90deg,#000,#1a1a1a);
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    border-bottom:2px solid #c79a3b;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#c79a3b;
+}
+
+.menu i{
+    color:#fff;
+    font-size:28px;
+}
+
+/* HERO SECTION */
+.hero{
+    width:100%;
+    height:400px;
+    background:url('https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    position:relative;
+    margin-top:70px;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    width:90%;
+}
+
+.hero-content h1{
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#ddd;
+}
+
+/* CONTACT CARD */
+.contact-wrapper{
+    width:100%;
+    padding:70px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.contact-card{
+    max-width:1100px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+.left-side{
+    background:linear-gradient(135deg,#000000,#222222);
+    color:#fff;
+    padding:60px 40px;
+    position:relative;
+}
+
+.left-side::before{
+    content:'';
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:#c79a3b;
+    border-radius:50%;
+    top:-70px;
+    left:-70px;
+    opacity:0.2;
+}
+
+.small-title{
+    color:#c79a3b;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.left-side h2{
+    font-size:42px;
+    line-height:1.4;
+    margin-bottom:40px;
+}
+
+.contact-box{
+    display:flex;
+    align-items:flex-start;
+    margin-bottom:30px;
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    min-width:65px;
+    border-radius:50%;
+    background:#c79a3b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:20px;
+}
+
+.icon i{
+    color:#000;
+    font-size:24px;
+}
+
+.details h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.details p,
+.details a{
+    color:#ddd;
+    text-decoration:none;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.details a:hover{
+    color:#c79a3b;
+}
+
+/* RIGHT SIDE */
+.right-side{
+    padding:60px 40px;
+    background:#fafafa;
+}
+
+.right-side h2{
+    font-size:40px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.right-side p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:30px;
+    font-size:16px;
+}
+
+.service-list{
+    list-style:none;
+}
+
+.service-list li{
+    padding:14px 0;
+    border-bottom:1px solid #ddd;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+}
+
+.service-list li i{
+    color:#c79a3b;
+    margin-right:12px;
+}
+
+/* FOOTER */
+.footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:25px 15px;
+    font-size:15px;
+}
+
+.footer span{
+    color:#c79a3b;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.contact-card{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.left-side h2,
+.right-side h2{
+    font-size:32px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+    height:320px;
+}
+
+.hero-content h1{
+    font-size:34px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.left-side,
+.right-side{
+    padding:40px 25px;
+}
+
+.left-side h2,
+.right-side h2{
+    font-size:28px;
+}
+
+.details h3{
+    font-size:20px;
+}
+
+.details p,
+.details a{
+    font-size:15px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    min-width:55px;
+}
+
+.icon i{
+    font-size:20px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">AS <span>LEGAL</span></div>
+    <div class="menu">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Professional Advocates & Legal Consultants</p>
+    </div>
+</section>
+
+<section class="contact-wrapper">
+    <div class="contact-card">
+
+        <div class="left-side">
+            <div class="small-title">LET'S TALK</div>
+            <h2>Speak With Legal Experts.</h2>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="details">
+                    <h3>Phone</h3>
+                    <p>8583069559 | 9007722989</p>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="details">
+                    <h3>Address</h3>
+                    <p>
+                    2D Nilamber Mukherjee Street,<br>
+                    Satyanarayan Apartment,<br>
+                    Kolkata - 700004
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="details">
+                    <h3>Email</h3>
+                    <a href="mailto:solutionsaslegal@gmail.com">
+                        solutionsaslegal@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="details">
+                    <h3>Website</h3>
+                    <a href="#">www.aslegalsolutions.in</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right-side">
+            <h2>About AS Legal Solutions</h2>
+
+            <p>
+                AS Legal Solutions is a professional legal consultancy and advocacy firm dedicated to providing trusted legal services with transparency, commitment, and professionalism. We help individuals and businesses with expert legal guidance and consultation.
+            </p>
+
+            <ul class="service-list">
+                <li><i class="fas fa-check-circle"></i> Civil Case Consultation</li>
+                <li><i class="fas fa-check-circle"></i> Criminal Case Support</li>
+                <li><i class="fas fa-check-circle"></i> Property & Documentation</li>
+                <li><i class="fas fa-check-circle"></i> Legal Notice & Agreements</li>
+                <li><i class="fas fa-check-circle"></i> Corporate Legal Services</li>
+                <li><i class="fas fa-check-circle"></i> Court Representation</li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 All Rights Reserved | Developed By <span>AS Legal Solutions</span>
+</footer>
+
+</body>
+</html>
