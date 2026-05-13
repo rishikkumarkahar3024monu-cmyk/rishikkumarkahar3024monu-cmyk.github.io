@@ -297,13 +297,23 @@ body{
 
 <header class="header">
     <div class="logo">AS <span>LEGAL</span></div>
-    <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Cases</a></li>
-    <li><a href="#">Lawyers</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-</ul>
+    .nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:#c79a3b;
+}
 </header>
 
 <section class="hero">
